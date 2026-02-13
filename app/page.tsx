@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Terminal from "./components/Terminal";
 
 export default function Home() {
+    
   return (
     <main className="flex-1">
-<section className="relative px-6 md:px-10 lg:px-40 py-20 lg:py-32 overflow-hidden">
+<section className="relative px-6 md:px-10 lg:px-20 py-10 lg:py-32 overflow-hidden">
 <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-12 items-center">
 <div className="flex flex-col gap-6 relative z-10">
 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
@@ -29,61 +31,21 @@ Let's Talk</Link>
 </div>
 </div>
 <div className="hidden lg:block relative group">
-<div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
-<div className="relative bg-slate-900 rounded-xl border border-slate-700 shadow-2xl overflow-hidden font-mono text-sm leading-relaxed">
-<div className="bg-slate-800 px-4 py-3 flex items-center gap-2 border-b border-slate-700">
-<div className="flex gap-1.5">
-<div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-<div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-<div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-</div>
-<div className="mx-auto text-slate-400 text-xs">zsh — 80×24</div>
-</div>
-<div className="p-6 text-slate-300">
-<div className="flex gap-3">
-<span className="text-primary">➜</span>
-<span className="text-emerald-400">~</span>
-<span>whoami</span>
-</div>
-<div className="mt-1 text-slate-400">Rene_Rodriguez</div>
-<div className="flex gap-3 mt-4">
-<span className="text-primary">➜</span>
-<span className="text-emerald-400">~</span>
-<span>ls skills/</span>
-</div>
-<div className="mt-1 grid grid-cols-2 gap-x-4 text-slate-400">
-<span>python</span>
-<span>typescript</span>
-<span>node.js</span>
-<span>mongodb</span>
-<span>next.js</span>
-<span>docker</span>
-<span>express.js</span>
-<span>mysql</span>
-<span>php</span>
-<span>wordpress</span>
-<span>c++</span>
-</div>
-<div className="flex gap-3 mt-4">
-<span className="text-primary">➜</span>
-<span className="text-emerald-400">~</span>
-<span className="animate-pulse">|</span>
-</div>
-</div>
-</div>
+<div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl opacity-50 group-hover:opacity-100 transition-opacity max-h-[323px]"></div>
+<Terminal></Terminal>
 </div>
 </div>
 </section>
-<section className="px-6 md:px-10 lg:px-40 py-20 bg-slate-900/50">
+<section className="px-6 md:px-10 lg:px-20 py-20 bg-slate-900/50">
 <div className="max-w-[1200px] mx-auto">
 <div className="flex items-end justify-between mb-12">
 <div className="flex flex-col gap-2">
 <h2 className="text-3xl font-bold dark:text-white tracking-tight">Featured Projects</h2>
 <p className="text-slate-500 dark:text-slate-400">Selection of recent works and open-source contributions.</p>
 </div>
-<a className="hidden md:flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all" href="#">
+<Link className="hidden md:flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all" href="/Works">
                                 View all projects <span className="material-symbols-outlined">arrow_forward</span>
-</a>
+</Link>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="group flex flex-col gap-4">
@@ -200,7 +162,7 @@ Let's Talk</Link>
 </div>
 </div>
 </section>
-<section className="px-6 md:px-10 lg:px-40 py-20">
+<section className="px-6 md:px-10 lg:px-20 py-20">
 <div className="max-w-[1200px] mx-auto">
 <h2 className="text-2xl font-bold text-white mb-10 text-center">My Tech Stack</h2>
 <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-[#f1f5f9] opacity-60 hover:opacity-100 transition-opacity">
