@@ -9,7 +9,7 @@ const page = () => {
 <div className="flex flex-col gap-3 mb-16">
 <h1 className="text-[#111318] dark:text-white text-5xl font-black leading-tight tracking-[-0.033em]">Selected Works</h1>
 <p className="text-[#616f89] dark:text-white/60 text-lg font-normal max-w-2xl">
-                        A curated archive of software engineering projects, from high-scale enterprise applications to experimental open-source tools.
+                        A curated archive of software development projects.
                     </p>
 </div>
 

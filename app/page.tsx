@@ -49,10 +49,10 @@ Let's Talk</Link>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="group flex flex-col gap-4">
-<div className="relative overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
+<div tabIndex={0} className="relative overflow-hidden rounded-xl group [@media(pointer:coarse)]:focus:bg-blue-50 aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./brownissues.png')"}}>
 </div>
-<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">
 <div className="flex gap-4">
 <div className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
 <Link className="flex items-center justify-center" href={"https://brownissuestv.org/"}>
@@ -74,10 +74,10 @@ Let's Talk</Link>
 </div>
 </div>
 <div className="group flex flex-col gap-4">
-<div className="relative overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
+<div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./impactpage.png')"}}>
 </div>
-<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">
 <div className="flex gap-4">
 <div className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
 <Link className="flex items-center justify-center" href={"https://digitalnest.org/our-impact/"}>
@@ -104,10 +104,10 @@ Let's Talk</Link>
 </div>
 </div>
 <div className="group flex flex-col gap-4">
-<div className="relative overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
+<div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./aihub.png')"}}>
 </div>
-<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">
 <div className="flex gap-4">
 <div className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
 <Link className="flex items-center justify-center" href={"https://ai-learning-hub.bnaccounts.workers.dev/"}>
@@ -134,10 +134,10 @@ Let's Talk</Link>
 </div>
 </div>
 <div className="group flex flex-col gap-4">
-<div className="relative overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
+<div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./ai-image-generator.png')"}}>
 </div>
-<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">
 <div className="flex gap-4">
 <Link href={"https://ai-generated-images-eosin.vercel.app/"}className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
 <span className="material-symbols-outlined">link</span>
