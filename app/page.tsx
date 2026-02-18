@@ -20,7 +20,7 @@ export default function Home() {
                                 Building digital experiences <span className="text-primary">with code.</span>
 </h1>
 <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed">
-                                Hi, I’m Rene. I like building things that actually work — from responsive web apps with Next.js and Tailwind to backend services, data-focused projects, and self-hosted systems.
+                                Hi, I’m Rene. I like building things that actually work from responsive web apps with Next.js and Tailwind to backend services, data-focused projects, and self-hosted systems.
                             </p>
 <div className="flex flex-wrap gap-4 pt-4">
 <Link className="flex items-center justify-center rounded-lg h-14 px-8 bg-primary text-white font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all" href={"/Works"}>
@@ -129,7 +129,7 @@ Let's Talk</Link>
 </div>
 <h3 className="text-xl font-bold dark:text-white group-hover:text-primary transition-colors">AI Learning Hub</h3>
 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                        Lightweight Next.js + TypeScript microsite for hosting AI prompt recipes, workshops, and curated resources. Content lives in Markdown files inside the repo—no CMS or auth.
+                                        Lightweight Next.js + TypeScript microsite for hosting AI prompt recipes, workshops, and curated resources. Content lives in Markdown files inside the repo no CMS or auth.
                                     </p>
 </div>
 </div>
