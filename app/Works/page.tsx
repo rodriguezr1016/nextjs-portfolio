@@ -201,8 +201,8 @@ const page = () => {
 <Link href={"/Contact"} className="px-8 py-4 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
                             Let's Chat
                         </Link>
-<Link href={"./resume.pdf"} download={"Rene_Rodriguez_Resume.pdf"} className="px-8 py-4 bg-[#f0f2f4] dark:bg-white/5 text-[#111318] dark:text-white rounded-xl font-bold hover:bg-[#e4e7eb] dark:hover:bg-white/10 transition-colors">
-                            Download Resume
+<Link href={"/Resume"} className="px-8 py-4 bg-[#f0f2f4] dark:bg-white/5 text-[#111318] dark:text-white rounded-xl font-bold hover:bg-[#e4e7eb] dark:hover:bg-white/10 transition-colors">
+                            View Resume
                         </Link>
 </div>
 </div>

@@ -2,6 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+/**
+ * Each entry in `lines` represents one rendered row group in the faux terminal.
+ *
+ * - `prompt` stores the command the user typed so it can be replayed in history.
+ * - `text` stores freeform output, including React nodes for linked contact info.
+ * - `grid` stores multi-column output used by `ls skills/`.
+ */
 type Line =
   | { type: "prompt"; cmd: string }
   | { type: "text"; value: React.ReactNode }
@@ -21,35 +28,63 @@ const DEFAULT_SKILLS = [
   "c++",
 ];
 
+/**
+ * Builds the default terminal history shown on first render and after `clear`.
+ * Keeping this as data makes the component feel like a real shell session:
+ * the UI simply renders a command line followed by the output it produced.
+ */
+function createInitialLines(user: string, skills: string[]): Line[] {
+  return [
+    { type: "prompt", cmd: "whoami" },
+    { type: "text", value: user },
+    { type: "prompt", cmd: "ls skills/" },
+    { type: "grid", values: skills },
+  ];
+}
+
+/**
+ * Terminal is a client-side, in-memory command simulator used on the homepage.
+ *
+ * How it works:
+ * - The component keeps a history of rendered terminal rows in `lines`.
+ * - Submitting the form sends the current `input` through `runCommand`.
+ * - `runCommand` parses the first token as the command name and appends the
+ *   matching output rows to the history.
+ * - The shell is intentionally closed over a fixed command set; there is no
+ *   backend execution, filesystem access, or async process management.
+ * - Whenever history changes, the scroll container jumps to the bottom so the
+ *   newest command stays visible, similar to a real terminal window.
+ */
 export default function Terminal() {
-    const containerRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const skills = useMemo(() => DEFAULT_SKILLS, []);
 
   const [cwd] = useState("~");
   const [user] = useState("Rene_Rodriguez");
   const [input, setInput] = useState("");
-  const [lines, setLines] = useState<Line[]>([
-    { type: "prompt", cmd: "whoami" },
-    { type: "text", value: user },
-    { type: "prompt", cmd: "ls skills/" },
-    { type: "grid", values: skills },
-  ]);
+  const [lines, setLines] = useState<Line[]>(() => createInitialLines(user, skills));
 
-  const bottomRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   // Auto scroll to bottom on new output
- useEffect(() => {
-  if (containerRef.current) {
-    containerRef.current.scrollTop = containerRef.current.scrollHeight;
-  }
-}, [lines]);
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
+  }, [lines]);
 
 
   // Focus input when clicking anywhere in terminal body
   const focusInput = () => inputRef.current?.focus();
 
+  /**
+   * Converts raw text input into terminal history rows.
+   *
+   * The function always appends a `prompt` row first so the interface preserves
+   * what the visitor typed. Each command handler then pushes one or more output
+   * rows into `next`, which gets merged into the existing history in one update.
+   */
   const runCommand = (raw: string) => {
     const cmd = raw.trim();
 
@@ -148,10 +183,7 @@ export default function Terminal() {
 
       case "clear":
         // Don’t append; just clear to a clean state
-        setLines([{ type: "prompt", cmd: "whoami" },
-    { type: "text", value: user },
-    { type: "prompt", cmd: "ls skills/" },
-    { type: "grid", values: skills },]);
+        setLines(createInitialLines(user, skills));
         return;
 
       default:
@@ -183,9 +215,9 @@ export default function Terminal() {
           role="presentation"
         >
           <div
-  ref={containerRef}
-  className="max-h-[323px] min-h-[323px] overflow-y-auto pr-2"
->
+            ref={containerRef}
+            className="max-h-[323px] min-h-[323px] overflow-y-auto pr-2"
+          >
 
             {lines.map((line, idx) => {
               if (line.type === "prompt") {
@@ -245,7 +277,6 @@ export default function Terminal() {
               </div>
             </form>
 
-            <div ref={bottomRef} />
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ const Header = () => {
                       <Link className="text-sm text-white font-medium hover:text-primary transition-colors" href={"/Works"}>Projects</Link>
                       <Link className="text-sm text-white font-medium hover:text-primary transition-colors" href={"/Contact"}>Contact</Link>
                     </nav>
-                    <Link href={"./resume.pdf"} download={"Rene_Rodriguez_Resume.pdf"} className='flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all'>Resume</Link>
+                    <Link href={"/Resume"} className='flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all'>Resume</Link>
                   </div>
                 </div>
                 <div className="flex px-10 w-full md:hidden">
