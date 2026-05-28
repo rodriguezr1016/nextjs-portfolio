@@ -1,53 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const soundCanvasProjects = [
-  {
-    title: '50s/60s Gesture Melody',
-    description:
-      'A browser-based generative music toy that turns hand gesture signals into retro-inspired melodic phrases, chord motion, and responsive playback controls.',
-    image: '/soundcanvas-gesture-trigger.png',
-    liveUrl: 'https://50s-60s-music-gesture-trigger-versi.vercel.app',
-    githubUrl: 'https://github.com/rodriguezr1016/50s-60s-music-gesture-trigger-version',
-    tags: ['React', 'Vite', 'Tone.js', 'MediaPipe'],
-  },
-  {
-    title: '50s/60s Music Copy',
-    description:
-      'A variation of the 50s/60s music interface focused on close-harmony movement, simple hooks, and browser-native audio interaction.',
-    image: '/soundcanvas-50s-copy.png',
-    liveUrl: 'https://50s-60s-music-copy.vercel.app',
-    githubUrl: 'https://github.com/rodriguezr1016/50s-60s-music-copy',
-    tags: ['React', 'TypeScript', 'SoundFont', 'Tone.js'],
-  },
-  {
-    title: 'Ambient Game Music Gesture Capture',
-    description:
-      'An ambient game-music instrument that reacts to captured gestures, shifting musical texture and energy through a compact control surface.',
-    image: '/soundcanvas-ambient-gesture.png',
-    liveUrl: 'https://ambient-game-music-gesture-capture.vercel.app',
-    githubUrl: 'https://github.com/rodriguezr1016/ambient-game-music-gesture-capture',
-    tags: ['React', 'Vite', 'MediaPipe', 'Generative Audio'],
-  },
-  {
-    title: 'Ambient Game Music Watercolor Capture',
-    description:
-      'A watercolor-styled ambient sound experiment pairing gesture-driven music controls with a softer visual treatment for mood-based play.',
-    image: '/soundcanvas-watercolor.png',
-    liveUrl: 'https://ambient-game-music-watercolor-captu.vercel.app',
-    githubUrl: 'https://github.com/rodriguezr1016/ambient-game-music-watercolor-capture',
-    tags: ['React', 'TypeScript', 'Vite', 'Interactive Music'],
-  },
-  {
-    title: 'Ambient Game Music',
-    description:
-      'A generative ambient music playground for exploring game-style moods, texture changes, and layered browser audio patterns.',
-    image: '/soundcanvas-ambient.png',
-    liveUrl: 'https://ambient-game-music.vercel.app',
-    githubUrl: 'https://github.com/rodriguezr1016/ambient-game-music',
-    tags: ['React', 'Tone.js', 'SoundFont', 'Vercel'],
-  },
-]
+const soundCanvasTags = ['React', 'TypeScript', 'Tone.js', 'MediaPipe', 'Vercel']
 
 const page = () => {
   return (
@@ -63,43 +17,39 @@ const page = () => {
 
 	<div className="flex flex-col gap-24">
 
-  <section className="flex flex-col gap-8">
-  <div className="flex flex-col gap-3">
-  <span className="text-primary text-xs font-bold uppercase tracking-widest">New Interactive Audio Work</span>
-  <h2 className="text-[#111318] dark:text-white text-4xl font-black leading-tight">SoundCanvas Experiments</h2>
-  <p className="text-[#616f89] dark:text-white/60 text-base leading-relaxed max-w-3xl">
-                                A set of browser-based music interfaces exploring gesture capture, generative melody, ambient game scoring, and responsive audio controls.
-                            </p>
-  </div>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-  {soundCanvasProjects.map((project) => (
-    <article key={project.liveUrl} className="group overflow-hidden rounded-xl border border-[#f0f2f4] dark:border-white/10 bg-white dark:bg-white/[0.03] shadow-sm hover:shadow-xl transition-all duration-300">
-    <div className="aspect-[16/10] bg-center bg-cover bg-no-repeat border-b border-[#f0f2f4] dark:border-white/10" style={{ backgroundImage: `url(${project.image})` }} />
-    <div className="flex flex-col gap-4 p-6">
-    <div className="flex flex-col gap-2">
-    <h3 className="text-[#111318] dark:text-white text-2xl font-bold leading-tight group-hover:text-primary transition-colors">{project.title}</h3>
-    <p className="text-[#616f89] dark:text-white/70 text-sm leading-relaxed">{project.description}</p>
-    </div>
-    <div className="flex flex-wrap gap-2">
-    {project.tags.map((tag) => (
-      <span key={tag} className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">{tag}</span>
-    ))}
-    </div>
-    <div className="flex flex-wrap gap-3 pt-1">
-    <Link href={project.liveUrl} className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#111318] dark:bg-white dark:text-[#111318] text-white text-sm font-bold hover:bg-black dark:hover:bg-white/90 transition-all">
-    <span className="material-symbols-outlined text-lg">visibility</span>
-                                      View Live
-                                  </Link>
-    <Link href={project.githubUrl} className="flex items-center gap-2 px-4 py-2 rounded-lg border border-[#f0f2f4] dark:border-white/20 text-[#111318] dark:text-white text-sm font-bold hover:bg-[#f0f2f4] dark:hover:bg-white/5 transition-all">
-    <span className="material-symbols-outlined text-lg">code</span>
-                                      GitHub
-                                  </Link>
-    </div>
-    </div>
-    </article>
-  ))}
-  </div>
-  </section>
+	<div className="group flex flex-col md:flex-row items-center gap-10">
+	<div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Interactive SoundCanvas music interface with browser audio controls" style={{backgroundImage: 'url("./soundcanvas-ambient.png")'}}>
+	</div>
+	<div className="w-full md:w-1/2 flex flex-col gap-6">
+	<div className="flex flex-col gap-2">
+	<span className="text-primary text-xs font-bold uppercase tracking-widest">Featured Project</span>
+	<h3 className="text-[#111318] dark:text-white text-3xl font-bold leading-tight">SoundCanvas</h3>
+	<div className="flex items-center gap-3 text-[#616f89] dark:text-white/50 text-sm font-medium">
+	<span>2026</span>
+	<span className="size-1 rounded-full bg-[#616f89]/30"></span>
+	<span>Interactive Audio / Gesture Experiments</span>
+	</div>
+	</div>
+	<p className="text-[#616f89] dark:text-white/70 text-base leading-relaxed">
+	                                A collection of browser-based music experiments exploring gesture capture, generative melody, ambient game scoring, and responsive audio controls. This project will expand into a dedicated case study with demos and process notes.
+	                            </p>
+	<div className="flex flex-wrap gap-2">
+	{soundCanvasTags.map((tag) => (
+	  <span key={tag} className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">{tag}</span>
+	))}
+	</div>
+	<div className="flex flex-wrap gap-4 pt-2">
+	<Link href={"https://ambient-game-music.vercel.app"} className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#111318] dark:bg-white dark:text-[#111318] text-white text-sm font-bold hover:bg-black dark:hover:bg-white/90 transition-all">
+	<span className="material-symbols-outlined text-lg">visibility</span>
+	                                    View Demo
+	                                </Link>
+	<Link href={"https://github.com/rodriguezr1016/ambient-game-music"} className="flex items-center gap-2 px-5 py-2 rounded-lg border border-[#f0f2f4] dark:border-white/20 text-[#111318] dark:text-white text-sm font-bold hover:bg-[#f0f2f4] dark:hover:bg-white/5 transition-all">
+	<span className="material-symbols-outlined text-lg">code</span>
+	                                    GitHub
+	                                </Link>
+	</div>
+	</div>
+	</div>
 
 	<div className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Research survey website for comparing human and AI video detection accuracy" style={{backgroundImage: 'url("./ai-video-detection.png")'}}>
