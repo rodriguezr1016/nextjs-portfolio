@@ -50,6 +50,33 @@ Let's Talk</Link>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative overflow-hidden rounded-xl group [@media(pointer:coarse)]:focus:bg-blue-50 aspect-video bg-slate-200 dark:bg-slate-800">
+<div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./ai-video-detection.png')"}}>
+</div>
+<div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">
+<div className="flex gap-4">
+<Link href={"https://ai-detector-survey-urid.vercel.app/"} className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
+<span className="material-symbols-outlined">link</span>
+</Link>
+<Link href={"https://github.com/rodriguezr1016/ai-detector-survey"} className="size-12 rounded-full bg-white dark:bg-slate-900 flex items-center justify-center text-primary shadow-lg cursor-pointer">
+<span className="material-symbols-outlined">code</span>
+</Link>
+</div>
+</div>
+</div>
+<div className="flex flex-col gap-2">
+<div className="flex flex-wrap gap-2">
+<span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">AI/ML Research</span>
+<span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">MongoDB</span>
+<span className="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Python</span>
+</div>
+<h3 className="text-xl font-bold dark:text-white group-hover:text-primary transition-colors">AI vs Human Video Detection Research</h3>
+<p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                        Built and analyzed a research system comparing human judgment against AI detection models for identifying AI-generated video.
+                                    </p>
+</div>
+</div>
+<div className="group flex flex-col gap-4">
+<div tabIndex={0} className="relative overflow-hidden rounded-xl group [@media(pointer:coarse)]:focus:bg-blue-50 aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./brownissues.png')"}}>
 </div>
 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity flex items-center justify-center">

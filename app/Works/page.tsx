@@ -16,6 +16,43 @@ const page = () => {
 <div className="flex flex-col gap-24">
 
 <div className="group flex flex-col md:flex-row items-center gap-10">
+<div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Research survey website for comparing human and AI video detection accuracy" style={{backgroundImage: 'url("./ai-video-detection.png")'}}>
+</div>
+<div className="w-full md:w-1/2 flex flex-col gap-6">
+<div className="flex flex-col gap-2">
+<span className="text-primary text-xs font-bold uppercase tracking-widest">Research / Featured Project</span>
+<h3 className="text-[#111318] dark:text-white text-3xl font-bold leading-tight">Can AI Differentiate Between Recorded Video and Generated Video?</h3>
+<div className="flex items-center gap-3 text-[#616f89] dark:text-white/50 text-sm font-medium">
+<span>2025</span>
+<span className="size-1 rounded-full bg-[#616f89]/30"></span>
+<span>AI/ML Research + Web Development</span>
+</div>
+</div>
+<p className="text-[#616f89] dark:text-white/70 text-base leading-relaxed">
+                                Built and analyzed a research system comparing human judgment against AI detection models for identifying AI-generated video. I helped develop the randomized survey website, store results in MongoDB, and run SuSy, VideoMAE, and MINTIME against the same video set.
+                            </p>
+<div className="flex flex-wrap gap-2">
+<span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">React/Next.js</span>
+<span className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">MongoDB</span>
+<span className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">Python</span>
+<span className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">AI/ML Models</span>
+<span className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">Data Visualization</span>
+<span className="px-3 py-1 rounded-full bg-[#f0f2f4] dark:bg-white/10 text-[#111318] dark:text-white text-xs font-semibold">Vercel</span>
+</div>
+<div className="flex flex-wrap gap-4 pt-2">
+<Link href={"https://ai-detector-survey-urid.vercel.app/"} className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#111318] dark:bg-white dark:text-[#111318] text-white text-sm font-bold hover:bg-black dark:hover:bg-white/90 transition-all">
+<span className="material-symbols-outlined text-lg">visibility</span>
+                                    Live Survey
+                                </Link>
+<Link href={"https://github.com/rodriguezr1016/AI-vs-Human-Data"} className="flex items-center gap-2 px-5 py-2 rounded-lg border border-[#f0f2f4] dark:border-white/20 text-[#111318] dark:text-white text-sm font-bold hover:bg-[#f0f2f4] dark:hover:bg-white/5 transition-all">
+<span className="material-symbols-outlined text-lg">star</span>
+                                    Data/Code
+                                </Link>
+</div>
+</div>
+</div>
+
+<div className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Modern analytics dashboard with clean charts and dark mode interface" style={{backgroundImage: 'url("./brownissues.png'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
