@@ -45,7 +45,7 @@ export const caseStudies: CaseStudy[] = [
       'Captured each version as a deployable Vercel demo with its own GitHub repository for iteration and comparison.',
     ],
     outcome:
-      'The project became a flexible sandbox for testing how gesture, interface design, and generative audio can work together in a browser. The next phase is to turn the demo set into a fuller case study with interaction notes, musical logic, and short embedded walkthroughs.',
+      'The project became a flexible sandbox for testing how gesture, interface design, and generative audio can work together in a browser.',
     technologies: ['React', 'TypeScript', 'Vite', 'Tone.js', 'MediaPipe', 'SoundFont', 'Vercel'],
     links: [
       { label: 'View Demo', href: 'https://ambient-game-music.vercel.app' },
