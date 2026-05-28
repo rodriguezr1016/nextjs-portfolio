@@ -11,9 +11,6 @@ const page = () => {
             <h1 className="text-[#111318] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
               Rene Rodriguez
             </h1>
-            <p className="text-[#616f89] dark:text-white/60 text-lg max-w-2xl">
-              Preview my resume directly in the browser.
-            </p>
           </div>
           <Link
             href="/Contact"
