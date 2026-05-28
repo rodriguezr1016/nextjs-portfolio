@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ClickableCard from "./components/ClickableCard";
 import Terminal from "./components/Terminal";
 
 export default function Home() {
@@ -48,7 +49,7 @@ Let's Talk</Link>
 </Link>
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div className="group flex flex-col gap-4">
+<ClickableCard ariaLabel="View AI video detection research case study" href="/case-studies/ai-video-detection-research" className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative overflow-hidden rounded-xl group [@media(pointer:coarse)]:focus:bg-blue-50 aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./ai-video-detection.png')"}}>
 </div>
@@ -74,8 +75,8 @@ Let's Talk</Link>
                                         Built and analyzed a research system comparing human judgment against AI detection models for identifying AI-generated video.
                                     </p>
 </div>
-</div>
-<div className="group flex flex-col gap-4">
+</ClickableCard>
+<ClickableCard ariaLabel="View Brown Issues case study" href="/case-studies/brown-issues" className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative overflow-hidden rounded-xl group [@media(pointer:coarse)]:focus:bg-blue-50 aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./brownissues.png')"}}>
 </div>
@@ -99,8 +100,8 @@ Let's Talk</Link>
                                         A nonprofit WordPress website featuring custom PHP development, client-side JavaScript enhancements, and responsive front-end layouts built with HTML and CSS.
                                     </p>
 </div>
-</div>
-<div className="group flex flex-col gap-4">
+</ClickableCard>
+<ClickableCard ariaLabel="View Digital Nest Impact Page case study" href="/case-studies/digital-nest-impact-page" className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./impactpage.png')"}}>
 </div>
@@ -129,8 +130,8 @@ Let's Talk</Link>
                                         A dynamic WordPress page section that visualizes nonprofit metrics through programmatically generated SVG groups, responsive placement, and scroll-activated animation sequences.
                                     </p>
 </div>
-</div>
-<div className="group flex flex-col gap-4">
+</ClickableCard>
+<ClickableCard ariaLabel="View AI Learning Hub case study" href="/case-studies/ai-learning-hub" className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./aihub.png')"}}>
 </div>
@@ -159,8 +160,8 @@ Let's Talk</Link>
                                         Lightweight Next.js + TypeScript microsite for hosting AI prompt recipes, workshops, and curated resources. Content lives in Markdown files inside the repo no CMS or auth.
                                     </p>
 </div>
-</div>
-<div className="group flex flex-col gap-4">
+</ClickableCard>
+<ClickableCard ariaLabel="View OpenAI Image Generator case study" href="/case-studies/openai-image-generator" className="group flex flex-col gap-4">
 <div tabIndex={0} className="relative group [@media(pointer:coarse)]:focus:bg-blue-50 overflow-hidden rounded-xl aspect-video bg-slate-200 dark:bg-slate-800">
 <div className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style={{backgroundImage: "url('./ai-image-generator.png')"}}>
 </div>
@@ -183,9 +184,9 @@ Let's Talk</Link>
 <h3 className="text-xl font-bold dark:text-white group-hover:text-primary transition-colors">Open AI Image Generator</h3>
 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
                                         A full‑stack web app where users generate images from text prompts, share them to a community feed, and manage their own posts and likes.
-                                    </p>
+</p>
 </div>
-</div>
+</ClickableCard>
 </div>
 </div>
 </section>

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import ClickableCard from '../components/ClickableCard'
 
 const soundCanvasTags = ['React', 'TypeScript', 'Tone.js', 'MediaPipe', 'Vercel']
 
@@ -11,13 +12,13 @@ const page = () => {
 <div className="flex flex-col gap-3 mb-16">
 <h1 className="text-[#111318] dark:text-white text-5xl font-black leading-tight tracking-[-0.033em]">Selected Works</h1>
 <p className="text-[#616f89] dark:text-white/60 text-lg font-normal max-w-2xl">
-                        A curated archive of software development projects.
+                        A complete archive of software development projects.
                     </p>
 </div>
 
 	<div className="flex flex-col gap-24">
 
-	<div className="group flex flex-col md:flex-row items-center gap-10">
+	<ClickableCard ariaLabel="View SoundCanvas case study" href="/case-studies/soundcanvas" className="group flex flex-col md:flex-row items-center gap-10">
 	<div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Interactive SoundCanvas music interface with browser audio controls" style={{backgroundImage: 'url("./soundcanvas-ambient.png")'}}>
 	</div>
 	<div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -27,11 +28,11 @@ const page = () => {
 	<div className="flex items-center gap-3 text-[#616f89] dark:text-white/50 text-sm font-medium">
 	<span>2026</span>
 	<span className="size-1 rounded-full bg-[#616f89]/30"></span>
-	<span>Interactive Audio / Gesture Experiments</span>
+	<span>Full Stack Developer</span>
 	</div>
 	</div>
 	<p className="text-[#616f89] dark:text-white/70 text-base leading-relaxed">
-	                                A collection of browser-based music experiments exploring gesture capture, generative melody, ambient game scoring, and responsive audio controls. This project will expand into a dedicated case study with demos and process notes.
+	                                A collection of browser-based music experiments exploring gesture capture, generative melody, ambient game scoring, and responsive audio controls.
 	                            </p>
 	<div className="flex flex-wrap gap-2">
 	{soundCanvasTags.map((tag) => (
@@ -49,9 +50,9 @@ const page = () => {
 	                                </Link>
 	</div>
 	</div>
-	</div>
+	</ClickableCard>
 
-	<div className="group flex flex-col md:flex-row items-center gap-10">
+	<ClickableCard ariaLabel="View AI video detection research case study" href="/case-studies/ai-video-detection-research" className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Research survey website for comparing human and AI video detection accuracy" style={{backgroundImage: 'url("./ai-video-detection.png")'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -86,9 +87,9 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 
-<div className="group flex flex-col md:flex-row items-center gap-10">
+<ClickableCard ariaLabel="View Brown Issues case study" href="/case-studies/brown-issues" className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Modern analytics dashboard with clean charts and dark mode interface" style={{backgroundImage: 'url("./brownissues.png'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -119,9 +120,9 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 
-<div className="group flex flex-col md:flex-row-reverse items-center gap-10">
+<ClickableCard ariaLabel="View Digital Nest Impact Page case study" href="/case-studies/digital-nest-impact-page" className="group flex flex-col md:flex-row-reverse items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Code editor showing complex neural network architecture and data structures" style={{backgroundImage: 'url("./impactpage.png")'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -152,9 +153,9 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 
-<div className="group flex flex-col md:flex-row items-center gap-10">
+<ClickableCard ariaLabel="View OpenAI Image Generator case study" href="/case-studies/openai-image-generator" className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Abstract data visualization with flowing lines and vibrant nodes" style={{backgroundImage: "url('./ai-image-generator.png')"}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -189,9 +190,9 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 {/*--------------------------------------------------------------------------------------------- */}
-<div className="group flex flex-col md:flex-row items-center gap-10">
+<ClickableCard ariaLabel="View Classic Tree Service case study" href="/case-studies/classic-tree-service" className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Modern analytics dashboard with clean charts and dark mode interface" style={{backgroundImage: 'url("./classictree.png'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -225,9 +226,9 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 {/*-----------------------------------------------------------------------------*/}
-<div className="group flex flex-col md:flex-row items-center gap-10">
+<ClickableCard ariaLabel="View AI Learning Hub case study" href="/case-studies/ai-learning-hub" className="group flex flex-col md:flex-row items-center gap-10">
 <div className="w-full md:w-1/2 aspect-[16/10] bg-center bg-no-repeat bg-cover rounded-xl shadow-sm group-hover:shadow-xl transition-all duration-300 overflow-hidden" data-alt="Modern analytics dashboard with clean charts and dark mode interface" style={{backgroundImage: 'url("./aihub.png'}}>
 </div>
 <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -261,7 +262,7 @@ const page = () => {
                                 </Link>
 </div>
 </div>
-</div>
+</ClickableCard>
 {/*-----------------------------------------------------------------------------*/}
 </div>
 
